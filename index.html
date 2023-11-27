@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Site</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- <link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/> 
+
+ <link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.0.0/mdb.min.css"
+rel="stylesheet"
+/>  -->
+</head>
+<body>
+  
+
+   <div class="navbar" id="myNavbar">
+    <div>
+      <img style="width: 100px;height: 100px; " src="HOODIES.png" alt="Logo">
+
+    </div>
+    <div>
+
+    <a href="#home-sec">Home</a>
+    <a href="#about-section">About Us</a>
+    <a href="#product">Product</a>
+    <a href="#contact-sec">Contact Us</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        &#9776;
+    </a>
+  </div>
+  
+    
+</div> 
+
+
+
+  
+   <script>
+        function check(){
+
+var mobilemenu = document.getElementById("mobile-menu");
+
+if(mobilemenu.style.display == "none"){
+
+    mobilemenu.style.display = "block";
+}
+else{
+    mobilemenu.style.display = "none";
+}
+}
+
+// contact us java 
+submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    const {isDataValid, statusMessage} = validateForm();
+  
+    if (!isDataValid) {
+      document.getElementById('status').innerHTML = statusMessage;
+      return;
+    }
+  
+    document.getElementById('status').innerHTML = `<p class="note note-success">Sending...</p>`;
+    document.getElementById('custom-validate-form').submit();
+  });
+  
+  function validateForm() {
+    let isDataValid = true;
+    let statusMessage = '';
+  
+    const name = document.getElementById('custom-validation-name').value;
+    if (name === "") {
+      statusMessage += `<p class="note note-danger"><strong>Name</strong> cannot be empty</p>`;
+      isDataValid = false;
+    };
+  
+    const email = document.getElementById('custom-validation-email').value;
+    if (email === "") {
+      statusMessage += `<p class="note note-danger"><strong>Email</strong> cannot be empty</p>`;
+      isDataValid = false;
+    } else {
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<p>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  
+      if(!re.test(email)){
+        statusMessage += `<p class="note note-danger"><strong>Email</strong> is invalid</p>`;
+        isDataValid = false;
+      }
+    }
+  
+    const subject = document.getElementById('custom-validation-subject').value;
+    if (subject === "") {
+      statusMessage += `<p class="note note-danger"><strong>Subject</strong> cannot be empty</p>`;
+      isDataValid = false;
+    }
+    const message = document.getElementById('custom-validation-message').value;
+      if (message === "") {
+      statusMessage += `<p class="note note-danger"><strong>Subject</strong> cannot be empty</p>`;
+      isDataValid = false;
+    }
+  
+    return {isDataValid, statusMessage};
+  }
+
+  </script>
+  <!-- <div class="navbar">
+    <img width="50px"  src="White & Black Minimalist Logo Distro Fashion.png" alt="">
+
+    <div class="main-nav">
+            <ul class="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Shop</a></li>
+            </ul>
+    </div>
+    
+        <input class="search" type="search" id="myinput" placeholder="Search ...">
+
+   
+</div> -->
+<button id="bb" onclick="check()">
+  <img src="icons8-menu-50.png" alt="">
+ </button>
+
+     <div id="mobile-menu">
+             <ul class="mobile-nav">
+                 <li><a href="#home-sec">Home</a></li>
+                 <li><a href="#about-section">About</a></li>
+                 <li><a href="#contact-sec">Contact</a></li>
+                 <li><a href="#product">Product</a></li>
+             </ul>
+     </div> 
+    
+
+<section id="home-sec">
+  <header class="hero">
+    <div class="container">
+        <h1 class="heading">HOODIES</h1>
+        <br>
+        <p>Unleash Your Style: Elevate your wardrobe with hoodies. Combining comfort and trendsetting designs, our hoodies redefine streetwear. Discover unique statements in every stitch. Explore now!</p>
+        <a href="#product" id="btt" class="btn btn-primary btn-hover ">ORDER NOW</a>
+    </div>
+  </header>
+</section>
+
+<br>
+  <h1 style="text-align: center; font-family: sans-serif; font-weight: bold;margin-top: 20px;">TOP SELLING PRODUCTS</h1>
+<br>
+
+<section style="background-color: #eee; font-family: sans-serif;">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
+        <div class="card">
+          <div  class="d-flex justify-content-between p-3">
+            <p class="lead mb-0">Today's Combo Offer</p>
+            <div
+              class="bg-dark rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+              style="width: 35px; height: 35px;">
+              <p class="text-white mb-0 small">x4</p>
+            </div>
+          </div>
+          <img height="300px"  src="j j.jpg"
+            class="card-img-top" alt="Laptop" />
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <p class="small"><a href="singleproduct.html" class="text-muted">Hoodies</a></p>
+              <p class="small text-danger"><s>$150</s></p>
+            </div>
+
+            <div class="d-flex justify-content-between mb-3">
+              <h5 class="mb-0">Pure Black Hoodie</h5>
+              <h5 class="text-dark mb-0">$100</h5>
+            </div>
+
+            <div class="d-flex justify-content-between mb-2">
+              <p class="text-muted mb-0">Available: <span class="fw-bold">20</span></p>
+              <div class="ms-auto text-warning">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+        <div class="card">
+          <div class="d-flex justify-content-between p-3">
+            <p class="lead mb-0">Today's Combo Offer</p>
+            <div
+              class="bg-dark rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+              style="width: 35px; height: 35px;">
+              <p class="text-white mb-0 small">x2</p>
+            </div>
+          </div>
+          <img height="300px" src="white 1.png"
+            class="card-img-top" alt="Laptop" />
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <p class="small"><a href="singleproduct.html" class="text-muted">Hoodies</a></p>
+              <p class="small text-danger"><s>$120</s></p>
+            </div>
+
+            <div class="d-flex justify-content-between mb-3">
+              <h5 class="mb-0">White Hoodie</h5>
+              <h5 class="text-dark mb-0">$90</h5>
+            </div>
+
+            <div class="d-flex justify-content-between mb-2">
+              <p class="text-muted mb-0">Available: <span class="fw-bold">25</span></p>
+              <div class="ms-auto text-warning">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div  class="col-md-6 col-lg-4 mb-4 mb-md-0">
+        <div class="card">
+          <div class="d-flex justify-content-between p-3">
+            <p class="lead mb-0">Today's Combo Offer</p>
+            <div
+              class="bg-dark rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+              style="width: 35px; height: 35px;">
+              <p class="text-white mb-0 small">x3</p>
+            </div>
+          </div>
+          <img height="300px" src="color hoodie.jpg"
+            class="card-img-top" alt="Gaming Laptop" />
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <p class="small"><a href="singleproduct.html" class="text-muted">Hoodies</a></p>
+              <p class="small text-danger"><s>$140</s></p>
+            </div>
+
+            <div class="d-flex justify-content-between mb-3">
+              <h5 class="mb-0">multiple colors hoodie</h5>
+              <h5 class="text-dark mb-0">$120</h5>
+            </div>
+
+            <div class="d-flex justify-content-between mb-2">
+              <p class="text-muted mb-0">Available: <span class="fw-bold">5</span></p>
+              <div class="ms-auto text-warning">
+                <i class="fa fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+
+
+<!-- Products start  -->
+
+
+<section id="product"  style="background-color: #eee;">
+  <div class="text-center container py-5">
+    <h1 class="mt-4 mb-5"><strong>Products</strong></h1>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+            data-mdb-ripple-color="light">
+            <img style="height: 400px;" src="hoodie 1.avif"
+              class="w-100" />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-start align-items-end h-100">
+                  <h5><span class="badge bg-primary ms-2">New</span></h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="singleproduct.html" class="text-reset">
+              <h5 class="card-title mb-3">Red</h5>
+            </a>
+            <a href="singleproduct.html" class="text-reset">
+              <p>Hoodie</p>
+            </a>
+            <h6 class="mb-3">$61.99</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+            data-mdb-ripple-color="light">
+            <img style="height: 430px;" src="hoodie 2.avif"
+              class="w-100" />
+            <a href="#!">
+           
+              <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="singleproduct.html" class="text-reset">
+              <h5 class="card-title mb-3">Hoodie</h5>
+            </a>
+            <a href="singleproduct.html" class="text-reset">
+              <p>Hoodie</p>
+            </a>
+            <h6 class="mb-3">$61.99</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
+            <img style="height: 430px;" src="hoodie 3.avif"
+              class="w-100" />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-start align-items-end h-100">
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="singleproduct.html" class="text-reset">
+              <h5 class="card-title mb-3">Light brown</h5>
+            </a>
+            <a href="singleproduct.html" class="text-reset">
+              <p>Hoodie</p>
+            </a>
+            <h6 class="mb-3">
+              <s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
+            <img style="height: 400px;" src="hoodie 4.avif"
+              class="w-100" />
+            <a href="#!">
+              <div class="mask">
+                <div 
+                class="d-flex justify-content-start align-items-end h-100">
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="singleproduct.html" class="text-reset">
+              <h5 class="card-title mb-3">Sky blue</h5>
+            </a>
+            <a href="singleproduct.html" class="text-reset">
+              <p>Hoodie</p>
+            </a>
+            <h6 class="mb-3">
+              <s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
+            </h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+            data-mdb-ripple-color="light">
+            <img style="height: 400px;" src="hoodie 5.avif"
+              class="w-100" />
+            <a href="#!">
+              <!-- <div class="mask">
+                <div class="d-flex justify-content-start align-items-end h-100"></div>
+              </div> -->
+              <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="singleproduct.html" class="text-reset">
+              <h5 class="card-title mb-3">Off white</h5>
+            </a>
+            <a href="singleproduct.html" class="text-reset">
+              <p>Hoodie</p>
+            </a>
+            <h6 class="mb-3">$61.99</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
+            <img style="height: 400px;" src="hoodie 6.avif"
+              class="w-100" />
+            <a href="#!">
+              <div class="mask">
+                <div class="d-flex justify-content-start align-items-end h-100">
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="singleproduct.html" class="text-reset">
+              <h5 class="card-title mb-3">light Gray</h5>
+            </a>
+            <a href="singleproduct.html" class="text-reset">
+              <p>Hoodie</p>
+            </a>
+            <h6 class="mb-3">
+              <s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Products end  -->
+
+<!-- About us start  -->
+
+<section id="about-section" class="sec">
+<div class="abt">
+  <h1>About Us</h1>
+
+  <p>Welcome to our hoodie haven, where comfort meets style! At Hoodie, we're passionate about delivering not just hoodies, but a lifestyle wrapped in warmth and fashion. Our journey began with a simple idea—to create hoodies that seamlessly blend coziness with contemporary trends. Each hoodie in our collection is crafted with precision, using high-quality materials to ensure the perfect balance of comfort and durability. Whether you're lounging at home, hitting the streets, or embarking on urban adventures, our hoodies are designed to be your trusted companion. Join us in celebrating the joy of being comfortably cool, one hoodie at a time.
+<br>
+    Our About Us story is one of authenticity and self-expression. Every hoodie we design is a canvas for personal style, inviting you to embrace the uniqueness that sets you apart. From minimalist designs to vibrant patterns, our hoodies are more than apparel they're a statement of identity. We believe in empowering you to express yourself fearlessly, and our commitment to quality ensures that your hoodie not only looks good but stands the test of time. Welcome to a world where fashion meets authenticity, and where your story is written in the comfort and style of Hoodie.
+  </p>
+</div>
+
+</section>
+<!-- About us end  -->
+
+<!-- contact us start  -->
+<section id="contact-sec">
+<form style="padding: 50px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; margin: 50px;"  id="custom-validate-form" action="mail.php" method="POST" class="needs-validation"
+  novalidate>
+  <h1>Contact us</h1>
+
+  <!-- Name input -->
+  <div class="form-outline mb-4">
+    <input type="text" id="name" name="name" class="form-control" />
+    <label class="form-label" for="name">Name</label>
+    <div class="invalid-feedback">
+      Please provide your name.
+    </div>
+  </div>
+
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="email" id="email" name="email" class="form-control" />
+    <label class="form-label" for="email">Email address</label>
+    <div class="invalid-feedback">
+      Please provide your email.
+    </div>
+  </div>
+
+  <!-- Subject input -->
+  <div class="form-outline mb-4">
+    <input type="text" id="subject" name="subject" class="form-control" />
+    <label class="form-label" for="subject">Subject</label>
+    <div class="invalid-feedback">
+      Please provide mail subject.
+    </div>
+  </div>
+
+  <!-- Message input -->
+  <div class="form-outline mb-4">
+    <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+    <label class="form-label" for="message">Message</label>
+    <div class="invalid-feedback">
+      Please provide a message text.
+    </div>
+  </div>
+
+  <!-- Submit button -->
+  <button style="width: 100px; " id="custom-validation-button" type="submit" class="btn btn-primary btn-block mb-4">
+    Send
+  </button>
+
+  <!-- Status message -->
+  <div id="status"></div>
+</form>
+</section>
+<br>
+
+  <!-- <div class="main-product">
+    <div class="card">
+      <img src="black.avif" width="400px", height="400px" alt="">
+      <h1>Black hoody</h1>
+      <h3>$70</h3>
+    </div>
+    <div class="card">
+      <img src="black.avif" width="400px", height="400px" alt="">
+      <h1>Black hoody</h1>
+      <h3>$70</h3>
+    </div>
+    <div class="card">
+      <img src="black.avif" width="400px", height="400px" alt="">
+      <h1>Black hoody</h1>
+      <h3>$70</h3>
+    </div>
+  </div> -->
+
+  <!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-white">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div >
+      <a href="https://www.facebook.com/" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com/" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.google.co.uk/" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="https://www.instagram.com/" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://pk.linkedin.com/" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>HOODIES
+          </h6>
+          <p>
+            Here you can use rows and columns to organize your our website content. Hoodies is
+            a well know brand around the world, consectetur adipisicing elit.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Hoodies</a>
+          </p>
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">About</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Contact</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Products</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            Hoodies@gmail.com.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4 bg-secondary" style="background-color: rgba(8, 7, 7, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+</body>
+</html

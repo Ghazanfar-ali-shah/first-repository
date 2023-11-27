@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+<script>
+  submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    const {isDataValid, statusMessage} = validateForm();
+  
+    if (!isDataValid) {
+      document.getElementById('status').innerHTML = statusMessage;
+      return;
+    }
+  
+    document.getElementById('status').innerHTML = `<p class="note note-success">Sending...</p>`;
+    document.getElementById('custom-validate-form').submit();
+  });
+  
+  function validateForm() {
+    let isDataValid = true;
+    let statusMessage = '';
+  
+    const name = document.getElementById('custom-validation-name').value;
+    if (name === "") {
+      statusMessage += `<p class="note note-danger"><strong>Name</strong> cannot be empty</p>`;
+      isDataValid = false;
+    };
+  
+    const email = document.getElementById('custom-validation-email').value;
+    if (email === "") {
+      statusMessage += `<p class="note note-danger"><strong>Email</strong> cannot be empty</p>`;
+      isDataValid = false;
+    } else {
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<p>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  
+      if(!re.test(email)){
+        statusMessage += `<p class="note note-danger"><strong>Email</strong> is invalid</p>`;
+        isDataValid = false;
+      }
+    }
+  
+    const subject = document.getElementById('custom-validation-subject').value;
+    if (subject === "") {
+      statusMessage += `<p class="note note-danger"><strong>Subject</strong> cannot be empty</p>`;
+      isDataValid = false;
+    }
+    const message = document.getElementById('custom-validation-message').value;
+      if (message === "") {
+      statusMessage += `<p class="note note-danger"><strong>Subject</strong> cannot be empty</p>`;
+      isDataValid = false;
+    }
+  
+    return {isDataValid, statusMessage};
+  }
+</script>
+  <div class="navbar" id="myNavbar">
+    <img src="your-logo.png" alt="Logo"> <!-- Replace "your-logo.png" with the actual path to your logo -->
+    <div class="dropdown">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <a href="#login">Login</a>
+</div>
+
+<header class="hero">
+  <div class="container">
+      <h1 class="bounce">ELEGANCE</h1>
+      <h2>ERA FURNITURE</h2>
+      <p>Welcome to a world of timeless elegance and exquisite craftsmanship. Our furniture isn't just about creating a space <br> it's about crafting an experience.  piece tells a story of passion, artistry, and attention to detail.</p>
+      <a href="products.html" class="btn btn-primary btn-hover">ORDER NOW!</a>
+  </div>
+</header>
+
+<form  id="custom-validate-form" action="mail.php" method="POST" class="needs-validation"
+  novalidate>
+  <h2>Contact us</h2>
+
+  <!-- Name input -->
+  <div class="form-outline mb-4">
+    <input type="text" id="name" name="name" class="form-control" />
+    <label class="form-label" for="name">Name</label>
+    <div class="invalid-feedback">
+      Please provide your name.
+    </div>
+  </div>
+
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="email" id="email" name="email" class="form-control" />
+    <label class="form-label" for="email">Email address</label>
+    <div class="invalid-feedback">
+      Please provide your email.
+    </div>
+  </div>
+
+  <!-- Subject input -->
+  <div class="form-outline mb-4">
+    <input type="text" id="subject" name="subject" class="form-control" />
+    <label class="form-label" for="subject">Subject</label>
+    <div class="invalid-feedback">
+      Please provide mail subject.
+    </div>
+  </div>
+
+  <!-- Message input -->
+  <div class="form-outline mb-4">
+    <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+    <label class="form-label" for="message">Message</label>
+    <div class="invalid-feedback">
+      Please provide a message text.
+    </div>
+  </div>
+
+  <!-- Submit button -->
+  <button id="custom-validation-button" type="submit" class="btn btn-primary btn-block mb-4">
+    Send
+  </button>
+
+  <!-- Status message -->
+  <div id="status"></div>
+</form>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+</body>
+</html>
